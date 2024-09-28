@@ -2,6 +2,7 @@
 import Typewriter from "typewriter-effect";
 import SocialIcon from "./SocialIcon";
 import { Button } from "@/components/ui/button";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export default function Box() {
   return (
@@ -18,11 +19,11 @@ export default function Box() {
           />
         </div>
         <SocialIcon />
-        <div className="flex gap-5">
-          <Button className="bg-white text-black text-base">
-            Download My Resume
+        <div className="flex justify-center items-center gap-5">
+          <RainbowButton>Download My Resume</RainbowButton>
+          <Button className="bg-blue-600 text-white rounded-xl h-11">
+            Contact Me
           </Button>
-          <Button className="bg-white text-black text-base">Contact Me</Button>
         </div>
       </div>
     </>
