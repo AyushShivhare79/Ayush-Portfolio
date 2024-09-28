@@ -9,7 +9,9 @@ export default function Home() {
     <>
       <Navbar />
       <Box />
-      <Marquee/>
+      <div className="container mx-auto text-white overflow-x-hidden">
+        <Marquee />
+      </div>
       <Projects />
 
       {/* <About /> */}
