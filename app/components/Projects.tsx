@@ -1,4 +1,4 @@
-import CustomCard from "./CustomCard";
+import CustomCard from "./ProjectCard";
 
 export default function () {
   return ( 
