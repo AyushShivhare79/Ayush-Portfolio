@@ -12,7 +12,7 @@ export default function () {
           <div>Abount Me</div>
           <div>Contact</div>
         </div>
-        <SocialIcon border={false} />
+        <SocialIcon />
       </div>
     </>
   );

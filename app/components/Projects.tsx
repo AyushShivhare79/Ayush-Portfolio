@@ -1,7 +1,7 @@
 import CustomCard from "./CustomCard";
 
 export default function () {
-  return (
+  return ( 
     <>
       <div className="flex flex-col justify-center items-center text-5xl">
         <h1 className="py-10">My Projects</h1>

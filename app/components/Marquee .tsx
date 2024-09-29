@@ -36,12 +36,12 @@ export default function () {
   ];
   return (
     <>
-      <div className="border border-white">
-        <div className="flex">
+      <div className="">
+        <div className="flex gap-14">
           <motion.div
-            initial={{ x: 0 }}
+            initial={{ x: 56 }}
             animate={{ x: "-100%" }}
-            transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             className="flex flex-shrink-0 gap-14 text-6xl"
           >
             <SiHtml5 />
@@ -60,9 +60,9 @@ export default function () {
           </motion.div>
 
           <motion.div
-            initial={{ x: 0 }}
+            initial={{ x: 56 }}
             animate={{ x: "-100%" }}
-            transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             className="flex flex-shrink-0 gap-14 text-6xl"
           >
             <SiHtml5 />

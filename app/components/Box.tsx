@@ -18,7 +18,7 @@ export default function Box() {
           <h1 className="font-Tailpoppins">Ayush Shivhare</h1>
           <TypewriterEffect words={startText} />
         </div>
-        <SocialIcon />
+        <SocialIcon border={true} />
         <div className="flex justify-center items-center gap-5">
           <TailwindButton text="Download My Resume" />
           <Button className="bg-blue-600 text-white rounded-xl h-11 hover:text-black hover:bg-white">

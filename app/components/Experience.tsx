@@ -6,30 +6,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import ExperienceCard from "./ExperienceCard";
 
 export default function Experience() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center pt-20 pb-10">
-        <h1>My experience</h1>
-        <Card>
-          <CardHeader>
-            <CardTitle>Freelance Back-End Developer</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>Remote</p>
-            <p>Self-Employed</p>
-          </CardContent>
-          <CardDescription>
-            As a freelance front-end developer, I specialize in creating dynamic
-            and visually appealing landing pages. My work involves using modern
-            technologies to deliver responsive and user-friendly designs that
-            help businesses enhance their online presence.
-          </CardDescription>
-          <CardFooter>
-            <p>August - September 2024</p>
-          </CardFooter>
-        </Card>
+      <div className="flex flex-col justify-center items-center text-5xl pt-20 pb-10">
+        <h1 className="py-5">My experience</h1>
+        <div>
+          <ExperienceCard />
+          <ExperienceCard />
+        </div>
       </div>
     </>
   );
