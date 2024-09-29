@@ -1,35 +1,36 @@
+import Heading from "./Heading";
 import CustomCard from "./ProjectCard";
 
 export default function () {
-  return ( 
+  return (
     <>
-      <div className="flex flex-col justify-center items-center text-5xl">
-        <h1 className="py-10">My Projects</h1>
-        <div className="grid grid-cols-2 gap-5">
+      <div className="flex flex-col justify-center items-center ">
+        <Heading title="My Projects" />
+        <div className="grid grid-cols-2 gap-10">
           <CustomCard
             title="Cxchain"
-            description="Okay"
+            description="Create your solana wallet using only google account."
             image={"asdf"}
             trynow="#"
             github="#"
           />
           <CustomCard
             title="Blogging"
-            description="Okay"
+            description=""
             image={"asdf"}
             trynow="#"
             github="#"
           />
           <CustomCard
             title="Portfolio"
-            description="Okay"
+            description="A portfolio handcrafted by me."
             image={"asdf"}
             trynow="#"
             github="#"
           />
           <CustomCard
             title="Venmo"
-            description="Okay"
+            description="An wallet app where user can send, receive, and add money from thier bank account."
             image={"asdf"}
             trynow="#"
             github="#"
