@@ -1,31 +1,40 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import CustomCard from "./CustomCard";
 
 export default function () {
   return (
     <>
-      <div className="flex flex-col justify-center text-5xl">
-        <h1>My Projects</h1>
-        <Card>
-          <CardHeader>
-            <CardTitle>Cxchain</CardTitle>
-            <CardDescription>Card Description</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-          <CardFooter>
-            <Button>Try now</Button>
-            <Button>GitHub</Button>
-          </CardFooter>
-        </Card>
+      <div className="flex flex-col justify-center items-center text-5xl">
+        <h1 className="py-10">My Projects</h1>
+        <div className="grid grid-cols-2 gap-5">
+          <CustomCard
+            title="Cxchain"
+            description="Okay"
+            image={"asdf"}
+            trynow="#"
+            github="#"
+          />
+          <CustomCard
+            title="Blogging"
+            description="Okay"
+            image={"asdf"}
+            trynow="#"
+            github="#"
+          />
+          <CustomCard
+            title="Portfolio"
+            description="Okay"
+            image={"asdf"}
+            trynow="#"
+            github="#"
+          />
+          <CustomCard
+            title="Venmo"
+            description="Okay"
+            image={"asdf"}
+            trynow="#"
+            github="#"
+          />
+        </div>
       </div>
     </>
   );

@@ -1,13 +1,37 @@
+import { FloatingDock } from "@/components/ui/floating-dock";
 import { SiGithub, SiGmail, SiLinkedin, SiX } from "react-icons/si";
 
 export default function () {
+  const links = [
+    {
+      title: "Github",
+      icon: <SiGithub className="h-full w-full text-black" />,
+      href: "#",
+    },
+    {
+      title: "Linkedin",
+      icon: <SiLinkedin className="h-full w-full text-black" />,
+      href: "#",
+    },
+    {
+      title: "Twitter",
+      icon: <SiX className="h-full w-full text-black" />,
+      href: "#",
+    },
+    {
+      title: "Gmail",
+      icon: <SiGmail className="h-full w-full text-black" />,
+      href: "#",
+    },
+  ];
   return (
     <>
-      <div className="flex gap-10 text-4xl border border-white rounded-2xl px-10">
-        <SiGithub />
-        <SiLinkedin />
-        <SiX />
-        <SiGmail />
+      <div>
+        <FloatingDock
+          desktopClassName="bg-black border border-white w-full"
+          mobileClassName="bg-black"
+          items={links}
+        />
       </div>
     </>
   );
