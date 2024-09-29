@@ -13,7 +13,7 @@ export default function Box() {
   ];
   return (
     <>
-      <div className="flex justify-center flex-col items-center gap-5 border border-white h-[700px]">
+      <div className="flex justify-center flex-col items-center gap-5 h-[700px]">
         <div className="flex justify-center flex-col items-center font-semibold text-7xl font-serif">
           <h1 className="font-Tailpoppins">Ayush Shivhare</h1>
           <TypewriterEffect words={startText} />

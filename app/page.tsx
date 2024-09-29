@@ -5,18 +5,22 @@ import Projects from "./components/Projects";
 import Marquee from "./components/Marquee ";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
+import { BackgroundBeamsWithCollisionDemo } from "./components/Background";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Box />
+      <BackgroundBeamsWithCollision className="from-black to-black">
+        <Box />
+      </BackgroundBeamsWithCollision>
       <div className="container mx-auto text-white overflow-x-hidden">
         <Marquee />
       </div>
       <Projects />
-      <Experience/>
-      <Footer/>
+      <Experience />
+      <Footer />
       {/* <About /> */}
     </>
   );
