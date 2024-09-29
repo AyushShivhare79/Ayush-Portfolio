@@ -3,6 +3,8 @@ import Box from "./components/Box";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Marquee from "./components/Marquee ";
+import Experience from "./components/Experience";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +15,8 @@ export default function Home() {
         <Marquee />
       </div>
       <Projects />
-
+      <Experience/>
+      <Footer/>
       {/* <About /> */}
     </>
   );

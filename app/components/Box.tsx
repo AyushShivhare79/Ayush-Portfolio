@@ -21,7 +21,7 @@ export default function Box() {
         <SocialIcon />
         <div className="flex justify-center items-center gap-5">
           <TailwindButton text="Download My Resume" />
-          <Button className="bg-blue-600 text-white rounded-xl h-11">
+          <Button className="bg-blue-600 text-white rounded-xl h-11 hover:text-black hover:bg-white">
             Contact Me
           </Button>
         </div>

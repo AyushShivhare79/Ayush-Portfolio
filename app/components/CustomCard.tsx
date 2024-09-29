@@ -24,7 +24,7 @@ export default function CustomCard({
 }: card) {
   return (
     <>
-      <Card className="cursor-pointer transition-all duration-300 hover:-translate-y-2 w-full">
+      <Card className="cursor-pointer transition-all duration-200 hover:-translate-y-2 w-full bg-black text-white hover:bg-white  hover:text-black">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
