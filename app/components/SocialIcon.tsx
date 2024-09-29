@@ -1,7 +1,7 @@
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { SiGithub, SiGmail, SiLinkedin, SiX } from "react-icons/si";
 
-export default function () {
+export default function ({ border = true }: { border?: boolean }) {
   const links = [
     {
       title: "Github",
@@ -28,7 +28,9 @@ export default function () {
     <>
       <div>
         <FloatingDock
-          desktopClassName="bg-black border border-white w-full"
+          desktopClassName={`bg-black ${
+            border ? "border border-white" : "border-hidden	"
+          } w-full`}
           mobileClassName="bg-black"
           items={links}
         />

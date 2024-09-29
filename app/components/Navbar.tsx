@@ -1,7 +1,10 @@
+"use client";
+import SocialIcon from "./SocialIcon";
+
 export default function () {
   return (
     <>
-      <div className="flex justify-between border border-white px-40 py-3 ">
+      <div className="flex justify-between items-center px-40 py-3 ">
         <div className="flex gap-5">
           <div>Home</div>
           <div>Projects</div>
@@ -9,7 +12,7 @@ export default function () {
           <div>Abount Me</div>
           <div>Contact</div>
         </div>
-        <div>HERE</div>
+        <SocialIcon border={false} />
       </div>
     </>
   );
