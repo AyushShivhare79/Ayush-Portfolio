@@ -29,7 +29,7 @@ export default function ({ border = false }: { border?: boolean }) {
       <div>
         <FloatingDock
           desktopClassName={`bg-black ${
-            border ? "border border-[#565656]" : "border-hidden	"
+            border ? "border border-white rounded-full" : "border-hidden	"
           } w-full`}
           mobileClassName="bg-black"
           items={links}
@@ -37,4 +37,13 @@ export default function ({ border = false }: { border?: boolean }) {
       </div>
     </>
   );
+}
+
+
+const Cursor = () => {
+  return (
+    <>
+      <div className=""></div>
+    </>
+  )
 }

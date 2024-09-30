@@ -33,7 +33,9 @@ export default function CustomCard({
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button>Try now</Button>
-          <Button>GitHub</Button>
+          <Button className="bg-white text-black hover:bg-slate-300">
+            GitHub
+          </Button>
         </CardFooter>
       </Card>
     </>
