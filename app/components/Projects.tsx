@@ -6,7 +6,7 @@ export default function () {
   return (
     <>
       <div className="flex flex-col justify-center items-center ">
-        <Heading title="My Projects" />
+        <Heading id="projects" title="My Projects" />
         <div className="grid grid-cols-2 gap-10">
           <CustomCard
             title="Cxchain"
