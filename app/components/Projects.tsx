@@ -1,5 +1,6 @@
 import Heading from "./Heading";
 import CustomCard from "./ProjectCard";
+import { SiSolana } from "react-icons/si";
 
 export default function () {
   return (

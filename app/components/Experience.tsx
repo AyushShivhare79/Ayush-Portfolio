@@ -5,7 +5,7 @@ export default function Experience() {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <Heading title="My experience"/>
+        <Heading title="My experience" />
         <div className="flex flex-col justify-center items-center gap-10 w-1/2">
           <ExperienceCard
             title={"Freelance Back-End Developer"}
