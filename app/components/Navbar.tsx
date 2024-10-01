@@ -1,38 +1,42 @@
 "use client";
 
 import SocialIcon from "./SocialIcon";
-import { forwardRef } from "react";
-import { Link } from "react-scroll";
+import React, { forwardRef, RefObject } from "react";
+// import { Link } from "react-scroll";
+
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
-interface Tab {
-  name: string;
-  ref?: string;
-  link?: string;
-}
-
-const Navbar = () => {
+const Navbar = forwardRef<
+  HTMLDivElement,
+  {
+    experienceRef: RefObject<HTMLDivElement>;
+    projectsRef: RefObject<HTMLDivElement>;
+    contactRef: RefObject<HTMLDivElement>;
+  }
+>(({ experienceRef, projectsRef, contactRef }, ref) => {
   const router = useRouter();
-
   const Tab = [
     {
       link: "/",
       name: "Home",
     },
     {
+      ref: projectsRef,
       link: "projects",
       name: "Projects",
     },
     {
+      ref: experienceRef,
       link: "experience",
       name: "Experience",
     },
+    // {
+    //   link: "/about",
+    //   name: "About me",
+    // },
     {
-      link: "/about",
-      name: "About me",
-    },
-    {
+      ref: contactRef,
       link: "contact",
       name: "Contact",
     },
@@ -50,11 +54,13 @@ const Navbar = () => {
           {Tab.map((value, index) => {
             return (
               <div key={index}>
-                {/* {value.ref ? (
+                {value.ref ? (
                   <>
                     <button
                       onClick={() => {
-                        ref?.current?.scrollIntoView({ behavior: "smooth" });
+                        value.ref?.current?.scrollIntoView({
+                          behavior: "smooth",
+                        });
                       }}
                       className="group transition duration-300"
                     >
@@ -62,13 +68,19 @@ const Navbar = () => {
                       <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-500"></span>
                     </button>
                   </>
-                ) : ( */}
-                {/* < Link */}
-                {/* // href={value.link} */}
-                {/* // className="group transition duration-300" */}
-                {/* > */}
+                ) : (
+                  <button
+                    onClick={() => {
+                      return router.push(value.link);
+                    }}
+                    className="group transition duration-300 cursor-pointer"
+                  >
+                    <div>{value.name}</div>
+                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-500"></span>
+                  </button>
+                )}
 
-                {value.link[0] === "/" ? (
+                {/* {value.link[0] === "/" ? (
                   <>
                     <button
                       onClick={() => {
@@ -92,10 +104,7 @@ const Navbar = () => {
                       <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-500"></span>
                     </Link>
                   </>
-                )}
-
-                {/* </Link> */}
-                {/* )} */}
+                )} */}
               </div>
             );
           })}
@@ -104,15 +113,6 @@ const Navbar = () => {
       </motion.div>
     </>
   );
-};
+});
 
-export default forwardRef(Navbar);
-
-// const buttonInside = () => {
-//   return (
-//     <>
-//       <div>{value.name}</div>
-//       <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-500"></span>
-//     </>
-//   );
-// };
+export default Navbar;

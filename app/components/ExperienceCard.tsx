@@ -7,13 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  motion,
-  useAnimation,
-  useInView,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface cardType {
@@ -34,7 +28,7 @@ export default function ExperienceCard({
     visible: { opacity: 1, scale: 1, transition: { duration: 0.2 } },
     hidden: { opacity: 0, scale: 0.8 },
   };
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const control = useAnimation();
   const isInView = useInView(ref);
 

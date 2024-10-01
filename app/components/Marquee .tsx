@@ -17,7 +17,6 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
-//Fix the issue of scroll space
 export default function () {
   const icon = [
     <SiHtml5 />,
@@ -44,19 +43,9 @@ export default function () {
             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             className="flex flex-shrink-0 gap-14 text-6xl"
           >
-            <SiHtml5 />
-            <SiCss3 />
-            <SiJavascript />
-            <SiTypescript />
-            <SiReact />
-            <SiNextdotjs />
-            <SiNodedotjs />
-            <SiMongodb />
-            <SiPostgresql />
-            <SiRedis />
-            <SiGit />
-            <SiGithub />
-            <SiPostman />
+            {icon.map((value, index) => (
+              <div> {value}</div>
+            ))}
           </motion.div>
 
           <motion.div
@@ -65,19 +54,9 @@ export default function () {
             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             className="flex flex-shrink-0 gap-14 text-6xl"
           >
-            <SiHtml5 />
-            <SiCss3 />
-            <SiJavascript />
-            <SiTypescript />
-            <SiReact />
-            <SiNextdotjs />
-            <SiNodedotjs />
-            <SiMongodb />
-            <SiPostgresql />
-            <SiRedis />
-            <SiGit />
-            <SiGithub />
-            <SiPostman />
+            {icon.map((value, index) => (
+              <div> {value}</div>
+            ))}
           </motion.div>
         </div>
       </div>

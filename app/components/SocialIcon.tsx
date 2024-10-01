@@ -38,12 +38,3 @@ export default function ({ border = false }: { border?: boolean }) {
     </>
   );
 }
-
-
-const Cursor = () => {
-  return (
-    <>
-      <div className=""></div>
-    </>
-  )
-}
