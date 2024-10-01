@@ -43,7 +43,7 @@ const Navbar = () => {
       <motion.div
         initial={{ opacity: 0, y: -25 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.2, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex justify-between items-center px-40 py-3 "
       >
         <div className="flex gap-5">

@@ -1,7 +1,11 @@
+import Heading from "./Heading";
+
 export default function Contact() {
   return (
     <>
-      <div id="contact">Contact</div>
+      <div className="flex justify-center  items-center">
+        <Heading id="contact" title="Contact" />
+      </div>
     </>
   );
 }

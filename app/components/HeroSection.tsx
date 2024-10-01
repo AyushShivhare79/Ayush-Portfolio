@@ -11,9 +11,9 @@ export default function () {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 200 }}
+        initial={{ opacity: 0, y: 250 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeIn" }}
+        transition={{ duration: 0.8, ease: "linear" }}
       >
         <BackgroundBeamsWithCollision className="from-black to-black">
           <Box />

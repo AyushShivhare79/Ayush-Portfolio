@@ -3,24 +3,29 @@
 import SocialIcon from "./SocialIcon";
 import { Button } from "@/components/ui/button";
 import TailwindButton from "./TailwindButton";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import { forwardRef, useRef } from "react";
+import {
+  TypewriterEffect,
+  TypewriterEffectSmooth,
+} from "@/components/ui/typewriter-effect";
 import { Link } from "react-scroll";
 
 export default function Box() {
-  const startText = [
-    { text: "Full", className: "text-white font-Tailpoppins text-5xl" },
-    { text: "Stack", className: "text-white font-Tailpoppins text-5xl" },
+  const words = [
+    { text: "Full Stack" },
+    { text: "Stack" },
     { text: "Developer", className: "text-blue-500 font-Tailpoppins text-5xl" },
   ];
   return (
     <>
       <div className="flex justify-center flex-col items-center gap-5 h-[700px]">
-        <div className="flex justify-center flex-col items-center font-semibold text-8xl gap-5">
+        
+        <div className="flex justify-center flex-col items-center font-semibold text-8xl">
           <h1 className="font-Tailpoppins">Ayush Shivhare</h1>
-          <TypewriterEffect words={startText} />
+          <TypewriterEffectSmooth words={words} />
         </div>
+        
         <SocialIcon border={true} />
+        
         <div className="flex justify-center items-center gap-5">
           <TailwindButton text="Download My Resume" />
 
