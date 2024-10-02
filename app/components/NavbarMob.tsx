@@ -31,21 +31,19 @@ const MobileNavbar = () => {
 
   return (
     <nav className="relative">
-      <div className="flex items-center justify-between py-4 px-6 border border-white">
-        <div className="text-xl font-bold">Hello</div>
-        <button onClick={toggleMenu} className="focus:outline-none text-2xl">
+      <div
+        className={`flex items-center justify-between py-4 px-6 ${
+          isOpen && "fixed z-20"
+        }`}
+      >
+        <button onClick={toggleMenu} className={`focus:outline-none text-2xl`}>
           {isOpen ? <FaXmark /> : <FaBars />}
         </button>
       </div>
+
       {isOpen && (
-        <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center">
-          <button
-            onClick={toggleMenu}
-            className="absolute top-4 right-4 text-white text-2xl"
-          >
-            <FaXmark />
-          </button>
-          <ul className="flex flex-col gap-5 text-center text-3xl">
+        <div className="fixed inset-0 bg-black z-10 flex flex-col items-center justify-center">
+          <div className="flex flex-col gap-5 text-center text-3xl">
             {Tab.map((value, index) => {
               return (
                 <div key={index}>
@@ -61,7 +59,7 @@ const MobileNavbar = () => {
                 </div>
               );
             })}
-          </ul>
+          </div>
         </div>
       )}
     </nav>
