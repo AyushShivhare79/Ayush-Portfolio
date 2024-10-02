@@ -48,26 +48,24 @@ const Navbar = forwardRef<
         initial={{ opacity: 0, y: -25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex justify-between items-center px-40 py-3 "
+        className="flex justify-between items-center py-3 px-40"
       >
-        <div className="flex gap-5">
+        <div className="flex gap-5 text-lg">
           {Tab.map((value, index) => {
             return (
               <div key={index}>
                 {value.ref ? (
-                  <>
-                    <button
-                      onClick={() => {
-                        value.ref?.current?.scrollIntoView({
-                          behavior: "smooth",
-                        });
-                      }}
-                      className="group transition duration-300"
-                    >
-                      <div>{value.name}</div>
-                      <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-500"></span>
-                    </button>
-                  </>
+                  <button
+                    onClick={() => {
+                      value.ref?.current?.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
+                    className="group transition duration-300"
+                  >
+                    <div>{value.name}</div>
+                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-500"></span>
+                  </button>
                 ) : (
                   <button
                     onClick={() => {
@@ -109,7 +107,7 @@ const Navbar = forwardRef<
             );
           })}
         </div>
-        <SocialIcon />
+        {/* <SocialIcon /> */}
       </motion.div>
     </>
   );

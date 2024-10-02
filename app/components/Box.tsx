@@ -9,7 +9,6 @@ import { Link } from "react-scroll";
 export default function Box() {
   const words = [
     { text: "Full Stack" },
-    { text: "Stack" },
     { text: "Developer", className: "text-blue-500 font-Tailpoppins text-5xl" },
   ];
   return (

@@ -8,6 +8,8 @@ import Experience from "./Experience";
 import Footer from "./Footer";
 import Contact from "./Contact";
 import { motion } from "framer-motion";
+import MobileNavbar from "./MobileNavbar";
+import Test from "./Test";
 
 export default function () {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -16,11 +18,17 @@ export default function () {
 
   return (
     <>
-      <Navbar
+      {/* <Navbar
+        projectsRef={projectsRef}
+        experienceRef={experienceRef}
+        contactRef={contactRef}
+      /> */}
+      <Test
         projectsRef={projectsRef}
         experienceRef={experienceRef}
         contactRef={contactRef}
       />
+      {/* <MobileNavbar/> */}
       <motion.div
         initial={{ opacity: 0, y: 250 }}
         animate={{ opacity: 1, y: 0 }}
