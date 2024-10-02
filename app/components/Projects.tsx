@@ -8,7 +8,7 @@ export default function Projects() {
     <>
       <div className="flex flex-col justify-center items-center ">
         <Heading id="projects" title="My Projects" />
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 px-4 md:px-0 md:grid-cols-2 gap-10">
           <CustomCard
             title="Cxchain"
             description="Create your solana wallet using only google account."

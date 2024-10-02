@@ -48,7 +48,7 @@ export default function ExperienceCard({
         initial="hidden"
         animate={control}
       >
-        <Card className="border border-slate-700 p-5 text-2xl bg-black text-white">
+        <Card className="border border-slate-700 p-5 text-xl md:text-2xl bg-black text-white">
           <CardHeader>
             <CardTitle>{title}</CardTitle>
           </CardHeader>

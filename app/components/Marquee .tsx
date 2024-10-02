@@ -35,30 +35,28 @@ export default function () {
   ];
   return (
     <>
-      <div className="">
-        <div className="flex gap-14">
-          <motion.div
-            initial={{ x: 56 }}
-            animate={{ x: "-100%" }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            className="flex flex-shrink-0 gap-14 text-6xl"
-          >
-            {icon.map((value, index) => (
-              <div> {value}</div>
-            ))}
-          </motion.div>
+      <div className="flex gap-14">
+        <motion.div
+          initial={{ x: 56 }}
+          animate={{ x: "-100%" }}
+          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          className="flex flex-shrink-0 gap-14 text-6xl"
+        >
+          {icon.map((value, index) => (
+            <div> {value}</div>
+          ))}
+        </motion.div>
 
-          <motion.div
-            initial={{ x: 56 }}
-            animate={{ x: "-100%" }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            className="flex flex-shrink-0 gap-14 text-6xl"
-          >
-            {icon.map((value, index) => (
-              <div> {value}</div>
-            ))}
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ x: 56 }}
+          animate={{ x: "-100%" }}
+          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          className="flex flex-shrink-0 gap-14 text-6xl"
+        >
+          {icon.map((value, index) => (
+            <div> {value}</div>
+          ))}
+        </motion.div>
       </div>
     </>
   );

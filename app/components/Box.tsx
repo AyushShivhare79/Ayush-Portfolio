@@ -8,14 +8,21 @@ import { Link } from "react-scroll";
 
 export default function Box() {
   const words = [
-    { text: "Full Stack" },
+    {
+      text: "Full",
+    },
+    {
+      text: "Stack",
+    },
     { text: "Developer", className: "text-blue-500 font-Tailpoppins text-5xl" },
   ];
   return (
     <>
-      <div className="flex justify-center flex-col items-center h-full gap-5">
-        <div className="flex justify-center flex-col items-center font-medium text-8xl">
-          <h1 className="font-Tailpoppins">Ayush Shivhare</h1>
+      <div className="flex justify-center flex-col items-center h-full w-full gap-5">
+        <div className="  flex flex-col items-center">
+          <h1 className="text-4xl md:font-medium md:text-8xl font-Tailpoppins">
+            Ayush Shivhare
+          </h1>
           <TypewriterEffectSmooth words={words} />
         </div>
 
