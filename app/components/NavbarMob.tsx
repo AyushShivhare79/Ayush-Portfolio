@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { FaBars, FaXmark } from "react-icons/fa6";
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,21 +32,20 @@ const MobileNavbar = () => {
   return (
     <nav className="relative">
       <div className="flex items-center justify-between py-4 px-6 border border-white">
+        <div className="text-xl font-bold">Hello</div>
         <button onClick={toggleMenu} className="focus:outline-none text-2xl">
-          {isOpen ? "✕" : "☰"}
+          {isOpen ? <FaXmark /> : <FaBars />}
         </button>
-        <div className="text-xl font-bold">Logo</div>
       </div>
-
       {isOpen && (
         <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center">
           <button
             onClick={toggleMenu}
             className="absolute top-4 right-4 text-white text-2xl"
           >
-            ✕
+            <FaXmark />
           </button>
-          <ul className=" flex flex-col gap-5 text-center text-3xl">
+          <ul className="flex flex-col gap-5 text-center text-3xl">
             {Tab.map((value, index) => {
               return (
                 <div key={index}>

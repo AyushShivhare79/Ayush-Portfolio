@@ -1,15 +1,13 @@
 "use client";
 
-import { useRef } from "react";
 import Navbar from "./Navbar";
 import Main from "./Main";
 import Projects from "./Projects";
 import Experience from "./Experience";
-import Footer from "./Footer";
 import Contact from "./Contact";
+import Footer from "./Footer";
+import { useRef } from "react";
 import { motion } from "framer-motion";
-import MobileNavbar from "./MobileNavbar";
-import Test from "./Test";
 
 export default function () {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -18,17 +16,11 @@ export default function () {
 
   return (
     <>
-      {/* <Navbar
-        projectsRef={projectsRef}
-        experienceRef={experienceRef}
-        contactRef={contactRef}
-      /> */}
-      <Test
+      <Navbar
         projectsRef={projectsRef}
         experienceRef={experienceRef}
         contactRef={contactRef}
       />
-      {/* <MobileNavbar/> */}
       <motion.div
         initial={{ opacity: 0, y: 250 }}
         animate={{ opacity: 1, y: 0 }}
