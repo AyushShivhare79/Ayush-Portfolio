@@ -7,14 +7,7 @@ import NavbarDesk from "./NavbarDesk";
 import { motion } from "framer-motion";
 // import { navItems } from "@/data";
 
-const Navbar = forwardRef<
-  HTMLDivElement,
-  {
-    experienceRef: RefObject<HTMLDivElement>;
-    projectsRef: RefObject<HTMLDivElement>;
-    contactRef: RefObject<HTMLDivElement>;
-  }
->(({ experienceRef, projectsRef, contactRef }, ref) => {
+const Navbar = () => {
   const { isMobile, isTablet, isDesktop } = useScreenDetector();
 
   return (
@@ -24,18 +17,10 @@ const Navbar = forwardRef<
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       > */}
-        {isDesktop ? (
-          <NavbarDesk
-            projectsRef={projectsRef}
-            experienceRef={experienceRef}
-            contactRef={contactRef}
-          />
-        ) : (
-          <NavbarMob />
-        )}
+      {isDesktop ? <NavbarDesk /> : <NavbarMob />}
       {/* </motion.div> */}
     </>
   );
-});
+};
 
 export default Navbar;

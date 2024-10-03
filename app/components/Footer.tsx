@@ -5,8 +5,8 @@ import SocialIcon from "./SocialIcon";
 export default function Footer() {
   return (
     <>
-      <div className="flex flex-col justify-center md:justify-between md:items-center md:px-40 py-24 border border-white bg-slate-950">
-        <div className="text-base md:text-xl">Designed and Developed by Ayush Shivhare</div>
+      <div className="flex flex-col justify-center items-center text-center bg-slate-950 py-24 gap-5 px-5">
+        <div className="text-xl">Designed and Developed by Ayush Shivhare</div>
         <SocialIcon />
       </div>
     </>

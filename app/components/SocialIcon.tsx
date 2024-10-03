@@ -1,40 +1,38 @@
-import { FloatingDock } from "@/components/ui/floating-dock";
 import { SiGithub, SiGmail, SiLinkedin, SiX } from "react-icons/si";
+import { Dock, DockIcon } from "@/components/ui/dock";
 
 export default function ({ border = false }: { border?: boolean }) {
-  const links = [
+  const items = [
     {
-      title: "Github",
       icon: <SiGithub className="h-full w-full text-black" />,
       href: "#",
     },
     {
-      title: "Linkedin",
       icon: <SiLinkedin className="h-full w-full text-black" />,
       href: "#",
     },
     {
-      title: "Twitter",
       icon: <SiX className="h-full w-full text-black" />,
       href: "#",
     },
     {
-      title: "Gmail",
       icon: <SiGmail className="h-full w-full text-black" />,
       href: "#",
     },
   ];
   return (
     <>
-      <div>
-        <FloatingDock
-          desktopClassName={`bg-black ${
-            border ? "border border-white rounded-full" : "border-hidden	"
-          } w-full`}
-          mobileClassName="bg-black"
-          items={links}
-        />
-      </div>
+      <Dock
+        magnification={60}
+        distance={100}
+        className="flex gap-3 border-none"
+      >
+        {items.map((value, index) => (
+          <DockIcon key={index} className="bg-white size p-3">
+            {value.icon}
+          </DockIcon>
+        ))}
+      </Dock>
     </>
   );
 }

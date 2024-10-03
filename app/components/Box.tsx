@@ -1,5 +1,3 @@
-"use client";
-
 import SocialIcon from "./SocialIcon";
 import { Button } from "@/components/ui/button";
 import TailwindButton from "./TailwindButton";
@@ -14,12 +12,12 @@ export default function Box() {
     {
       text: "Stack",
     },
-    { text: "Developer", className: "text-blue-500 font-Tailpoppins text-5xl" },
+    { text: "Developer", className: "text-blue-500 font-Tailpoppins" },
   ];
   return (
     <>
       <div className="flex justify-center flex-col items-center h-full w-full gap-5">
-        <div className="  flex flex-col items-center">
+        <div className="flex flex-col items-center">
           <h1 className="text-4xl md:font-medium md:text-8xl font-Tailpoppins">
             Ayush Shivhare
           </h1>

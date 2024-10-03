@@ -1,10 +1,18 @@
+"use client";
+
+import { useScrollContext } from "../context/useContextRef";
 import ExperienceCard from "./ExperienceCard";
 import Heading from "./Heading";
 
 export default function Experience() {
+  const { experienceRef } = useScrollContext();
+
   return (
     <>
-      <div className="flex flex-col justify-center items-center">
+      <div
+        ref={experienceRef}
+        className="flex flex-col justify-center items-center"
+      >
         <Heading id="experience" title="My experience" />
         <div className="flex flex-col gap-10 w-full px-4 md:px-0 md:w-1/2">
           <ExperienceCard
