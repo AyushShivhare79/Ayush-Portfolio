@@ -39,7 +39,7 @@ export default function () {
         <motion.div
           initial={{ x: 56 }}
           animate={{ x: "-100%" }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
           className="flex flex-shrink-0 gap-14 text-6xl"
         >
           {icon.map((value, index) => (
@@ -50,7 +50,7 @@ export default function () {
         <motion.div
           initial={{ x: 56 }}
           animate={{ x: "-100%" }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
           className="flex flex-shrink-0 gap-14 text-6xl"
         >
           {icon.map((value, index) => (

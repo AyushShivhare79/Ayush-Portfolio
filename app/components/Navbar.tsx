@@ -1,7 +1,6 @@
 "use client";
 
 import useScreenDetector from "../../hooks/useScreenDetector";
-import { forwardRef, RefObject } from "react";
 import NavbarMob from "./NavbarMob";
 import NavbarDesk from "./NavbarDesk";
 import { motion } from "framer-motion";
@@ -12,13 +11,13 @@ const Navbar = () => {
 
   return (
     <>
-      {/* <motion.div
+      <motion.div
         initial={{ opacity: 0, y: -25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-      > */}
-      {isDesktop ? <NavbarDesk /> : <NavbarMob />}
-      {/* </motion.div> */}
+      >
+        {isDesktop ? <NavbarDesk /> : <NavbarMob />}
+      </motion.div>
     </>
   );
 };

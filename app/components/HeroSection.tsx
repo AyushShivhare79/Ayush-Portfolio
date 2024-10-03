@@ -1,18 +1,25 @@
-"use client"
+"use client";
 
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import Box from "./Box";
 import Marquee from "./Marquee ";
+import { motion } from "framer-motion";
 
 export default function () {
   return (
     <>
-      <BackgroundBeamsWithCollision className="from-black to-black">
-        <Box />
-      </BackgroundBeamsWithCollision>
-      <div className="container mx-auto text-white overflow-x-hidden">
-        <Marquee />
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 250 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "linear" }}
+      >
+        <BackgroundBeamsWithCollision className="from-black to-black">
+          <Box />
+        </BackgroundBeamsWithCollision>
+        <div className="container mx-auto text-white overflow-x-hidden">
+          <Marquee />
+        </div>
+      </motion.div>
     </>
   );
 }

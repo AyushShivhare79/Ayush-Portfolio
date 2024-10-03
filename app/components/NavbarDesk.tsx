@@ -3,9 +3,9 @@
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useScrollContext } from "../context/useContextRef";
+import SocialIcon from "./SocialIcon";
 
 const Navbar = () => {
-  const router = useRouter();
   const { projectRef, experienceRef, contactRef } = useScrollContext();
 
   const Tab = [
@@ -54,7 +54,7 @@ const Navbar = () => {
             );
           })}
         </div>
-        <div></div>
+        <SocialIcon />
       </div>
     </>
   );
