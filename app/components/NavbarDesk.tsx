@@ -1,35 +1,8 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { useScrollContext } from "../context/useContextRef";
 import SocialIcon from "./SocialIcon";
+import { Tab } from "@/types/Tab";
 
-const Navbar = () => {
-  const { projectRef, experienceRef, contactRef } = useScrollContext();
-
-  const Tab = [
-    {
-      name: "Home",
-      link: "/",
-    },
-    {
-      name: "Projects",
-      ref: projectRef,
-      link: "#projects",
-    },
-    {
-      name: "Experience",
-      ref: experienceRef,
-      link: "#experience",
-    },
-    {
-      name: "Contact",
-      ref: contactRef,
-      link: "#contact",
-    },
-  ];
-
+const Navbar = ({ Tab }: { Tab: Tab[] }) => {
   const handleClick = (sectionRef: any) => {
     if (sectionRef.current) {
       sectionRef.current.scrollIntoView({ behavior: "smooth" });
@@ -44,7 +17,7 @@ const Navbar = () => {
               <div key={index}>
                 <Link
                   href="/"
-                  onClick={(e: any) => handleClick(value.ref)}
+                  onClick={(e) => handleClick(value.ref)}
                   className="group transition duration-300 cursor-pointer"
                 >
                   <div>{value.name}</div>

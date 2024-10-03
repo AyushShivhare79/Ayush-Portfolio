@@ -1,34 +1,19 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import { Tab } from "@/types/Tab";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
-const MobileNavbar = () => {
+const MobileNavbar = ({ Tab }: { Tab: Tab[] }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const router = useRouter();
-  const Tab = [
-    {
-      link: "/",
-      name: "Home",
-    },
-    {
-      link: "projects",
-      name: "Projects",
-    },
-    {
-      link: "experience",
-      name: "Experience",
-    },
-    {
-      link: "contact",
-      name: "Contact",
-    },
-  ];
-
+  const handleClick = (sectionRef: any) => {
+    setIsOpen(!isOpen);
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <nav className="relative">
       <div
@@ -47,15 +32,14 @@ const MobileNavbar = () => {
             {Tab.map((value, index) => {
               return (
                 <div key={index}>
-                  <button
-                    onClick={() => {
-                      return router.push(value.link);
-                    }}
+                  <Link
+                    href="/"
+                    onClick={(e) => handleClick(value.ref)}
                     className="group transition duration-300 cursor-pointer"
                   >
                     <div>{value.name}</div>
                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-500"></span>
-                  </button>
+                  </Link>
                 </div>
               );
             })}
