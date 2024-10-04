@@ -1,7 +1,7 @@
 import { SiGithub, SiGmail, SiLinkedin, SiX } from "react-icons/si";
 import { motion } from "framer-motion";
 
-export default function ({ border = false }: { border?: boolean }) {
+export default function SocialIcon({ border = false }: { border?: boolean }) {
   const items = [
     {
       icon: <SiGithub />,

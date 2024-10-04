@@ -1,7 +1,7 @@
 import React from "react"; 
 // import Typewriter from 'typewriter-effect'; 
   
-export default function() { 
+export default function TypingEffect() { 
   return ( 
     <div> 
       <h3>GeeksforGeeks Typing Animation</h3> 

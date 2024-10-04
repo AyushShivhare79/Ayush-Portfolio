@@ -17,7 +17,7 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
-export default function () {
+export default function Marquee() {
   const icon = [
     <SiHtml5 />,
     <SiCss3 />,
@@ -43,7 +43,7 @@ export default function () {
           className="flex flex-shrink-0 gap-14 text-6xl"
         >
           {icon.map((value, index) => (
-            <div> {value}</div>
+            <div key={index.toString()}>{value}</div>
           ))}
         </motion.div>
 
@@ -54,7 +54,7 @@ export default function () {
           className="flex flex-shrink-0 gap-14 text-6xl"
         >
           {icon.map((value, index) => (
-            <div> {value}</div>
+            <div key={index.toString()}>{value}</div>
           ))}
         </motion.div>
       </div>

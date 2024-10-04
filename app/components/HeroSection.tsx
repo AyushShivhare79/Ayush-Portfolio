@@ -8,7 +8,7 @@ import Projects from "./Projects";
 import Experience from "./Experience";
 import Contact from "./Contact";
 
-export default function () {
+export default function HeroSection() {
   return (
     <>
       <motion.div
