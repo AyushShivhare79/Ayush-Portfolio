@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import TailwindButton from "./TailwindButton";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { Link } from "react-scroll";
+import Marquee from "./Marquee ";
 
 export default function Box() {
   const words = [
@@ -16,7 +17,7 @@ export default function Box() {
   ];
   return (
     <>
-      <div className="flex justify-center flex-col items-center h-full w-full gap-5">
+      <div className="sticky top-0 flex justify-center flex-col items-center h-screen w-full gap-10 bg-black">
         <div className="flex flex-col items-center">
           <h1 className="text-4xl md:font-medium md:text-8xl font-Tailpoppins">
             Ayush Shivhare
@@ -33,6 +34,9 @@ export default function Box() {
               Contact Me
             </Button>
           </Link>
+        </div>
+        <div className="container mx-auto text-white overflow-x-hidden">
+          <Marquee />
         </div>
       </div>
     </>

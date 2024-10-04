@@ -5,12 +5,14 @@ import { Tab } from "@/types/Tab";
 const Navbar = ({ Tab }: { Tab: Tab[] }) => {
   const handleClick = (sectionRef: any) => {
     if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+      sectionRef.current.scrollIntoView({
+        behavior: "smooth",
+      });
     }
   };
   return (
     <>
-      <div className="flex justify-between items-center py-5 px-40">
+      <div className="flex justify-between items-center py-2 px-40">
         <div className="flex gap-5 text-lg">
           {Tab.map((value, index) => {
             return (

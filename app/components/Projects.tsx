@@ -9,9 +9,12 @@ export default function Projects() {
 
   return (
     <>
-      <div ref={projectRef} className="flex flex-col justify-center items-center ">
+      <div
+        ref={projectRef}
+        className="relative flex flex-col justify-center items-center border p-10 border-green-500 bg-blue-500 "
+      >
         <Heading id="projects" title="My Projects" />
-        <div className="grid grid-cols-1 px-4 md:px-0 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <CustomCard
             title="Cxchain"
             description="Create your solana wallet using only google account."
