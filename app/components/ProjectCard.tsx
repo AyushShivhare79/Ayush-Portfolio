@@ -10,14 +10,14 @@ import {
 interface card {
   title: string;
   description: string;
-  image: any;
+  stack: any;
   trynow: string;
   github: string;
 }
 export default function CustomCard({
   title,
   description,
-  image,
+  stack,
   trynow,
   github,
 }: card) {
@@ -29,7 +29,7 @@ export default function CustomCard({
         </CardHeader>
         <CardContent>
           <p>{description}</p>
-          <p>Tech Stack: {image}</p>
+          {/* <p>Tech Stack: {stack}</p> */}
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button>Try now</Button>

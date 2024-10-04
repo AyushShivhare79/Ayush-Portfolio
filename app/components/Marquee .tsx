@@ -18,20 +18,46 @@ import {
 import { motion } from "framer-motion";
 
 export default function Marquee() {
-  const icon = [
-    <SiHtml5 />,
-    <SiCss3 />,
-    <SiJavascript />,
-    <SiTypescript />,
-    <SiReact />,
-    <SiNextdotjs />,
-    <SiNodedotjs />,
-    <SiMongodb />,
-    <SiPostgresql />,
-    <SiRedis />,
-    <SiGit />,
-    <SiGithub />,
-    <SiPostman />,
+  const icons = [
+    {
+      icons: <SiHtml5 />,
+    },
+    {
+      icons: <SiCss3 />,
+    },
+    {
+      icons: <SiJavascript />,
+    },
+    {
+      icons: <SiTypescript />,
+    },
+    {
+      icons: <SiReact />,
+    },
+    {
+      icons: <SiNextdotjs />,
+    },
+    {
+      icons: <SiNodedotjs />,
+    },
+    {
+      icons: <SiMongodb />,
+    },
+    {
+      icons: <SiPostgresql />,
+    },
+    {
+      icons: <SiRedis />,
+    },
+    {
+      icons: <SiGit />,
+    },
+    {
+      icons: <SiGithub />,
+    },
+    {
+      icons: <SiPostman />,
+    },
   ];
   return (
     <>
@@ -42,8 +68,8 @@ export default function Marquee() {
           transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
           className="flex flex-shrink-0 gap-14 text-6xl"
         >
-          {icon.map((value, index) => (
-            <div key={index.toString()}>{value}</div>
+          {icons.map((value, index) => (
+            <div key={index}>{value.icons}</div>
           ))}
         </motion.div>
 
@@ -53,8 +79,8 @@ export default function Marquee() {
           transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
           className="flex flex-shrink-0 gap-14 text-6xl"
         >
-          {icon.map((value, index) => (
-            <div key={index.toString()}>{value}</div>
+          {icons.map((value, index) => (
+            <div key={index}>{value.icons}</div>
           ))}
         </motion.div>
       </div>

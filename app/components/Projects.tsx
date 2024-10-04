@@ -11,37 +11,37 @@ export default function Projects() {
     <>
       <div
         ref={projectRef}
-        className="relative flex flex-col justify-center items-center border p-10 border-green-500 bg-blue-500 "
+        className="relative flex flex-col justify-center items-center p-10 bg-blue-500 "
       >
         <Heading id="projects" title="My Projects" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <CustomCard
             title="Cxchain"
-            description="Create your solana wallet using only google account."
-            image={"asdf"}
-            trynow="#"
-            github="#"
+            description="Create your Solana wallet instantly with just your Google account - no seed phrases, no hassle. Start your crypto journey in seconds with secure, simple one-click access."
+            stack={""}
+            trynow="https://cxchain.vercel.app"
+            github="https://github.com/AyushShivhare79/cxchain"
           />
           <CustomCard
             title="Blogging"
-            description=""
-            image={"asdf"}
+            description="Ongoing"
+            stack={""}
             trynow="#"
             github="#"
           />
           <CustomCard
             title="Portfolio"
             description="A portfolio handcrafted by me."
-            image={"asdf"}
+            stack={""}
             trynow="#"
             github="#"
           />
           <CustomCard
             title="Venmo"
-            description="An wallet app where user can send, receive, and add money from thier bank account."
-            image={"asdf"}
+            description="Your all-in-one digital wallet for effortless money management. Send money to friends, and handle transfers with just a few taps"
+            stack={""}
             trynow="#"
-            github="#"
+            github="https://github.com/AyushShivhare79/Venmo"
           />
         </div>
       </div>
